@@ -392,7 +392,8 @@ class Twitter {
             $method = 'get' . ucfirst($mode) . 'Url';
             $authUrl = $this->$method();
 
-            return $this->redirect->to($authUrl);
+            //return $this->redirect->to($authUrl);
+            return $authUrl;
         }
 
         $this->triggerError($errorMessage);
